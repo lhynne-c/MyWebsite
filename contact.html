@@ -19,8 +19,8 @@
                     <li><a href="https://www.linkedin.com/in/lhynneconcepcion/" target="_blank">LinkedIn</a></li>
                     <li><a href="https://github.com/lhynne-c" target="_blank">Github</a></li>
                     <li><a href="https://www.credly.com/users/rollylhynne_concepcion/badges" target="_blank">Badges</a></li>
-                    <li><a href="Rolly Lhynne Concepcion xx.pdf"  target="_blank" >Download CV</a></li>
-                    <li><a href="contact.html"  target="_blank" >Contact Me!</a></li>
+                    <li><a href="Rolly Lhynne Concepcion xx.pdf"  target="_blank" >CV</a></li>
+                    <li><a href="contact.html">Contact Me!</a></li>
                 </ul>
                 
 
@@ -42,7 +42,7 @@
                     <label for="message">Message:</label>
                     <textarea name="message"  id="" cols="30" rows="10"></textarea >
                     <button class="btn" id="send">Send Message</button>
-                    <script> src="index.js"</script>
+                   
              </form>
             </div>
 
@@ -63,6 +63,27 @@
         </h2>
     </div>  
     
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+
+        function sendEmail(){
+            Email.send({
+                SecurityToken: "6736d364-34f5-48d7-98f0-82a2b858bf05",
+                To : 'lhynne.concepcion@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form",
+                Body : document.getElementById("message").value + document.getElementById("name").value + document.getElementById("email").value
+            }).then(
+            message => alert("Thank you for your email. I will reach out to you as soon as I can!")
+            );
+        }
+
+
+    </script>
+    
+
+
     
     </head>
     
