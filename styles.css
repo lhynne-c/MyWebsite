@@ -133,7 +133,17 @@ button{
 }
 
 
-@media only screen and (max-width:768pc){
+@media only screen and (max-width:1008px){
+  .profile_container{
+    font: 20px  Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    float:right;
+    padding-right: 30px 10%;
+  }
+}
+
+
+@media (min-width:900px){
   .profile_container{
     font: 20px  Arial, Helvetica, sans-serif;
     flex-direction: column;
